@@ -112,3 +112,9 @@ RUN echo "zap2docker-live" > /zap/container && \
 WORKDIR /zap
 
 HEALTHCHECK CMD curl --silent --output /dev/null --fail http://localhost:$ZAP_PORT/ || exit 1
+
+# Instructions to build the Docker image
+# docker build -t zaproxy-live -f /Users/naveenprakash/Desktop/zaproxy/docker/Dockerfile-live .
+
+# Instructions to run the Docker container
+# docker run -d -p 8080:8080 zaproxy-live

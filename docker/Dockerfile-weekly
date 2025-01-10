@@ -50,7 +50,7 @@ RUN apt-get update && apt-get install -q -y --fix-missing \
     mkdir /zap  && \
     chown zap:zap /zap
 
-RUN pip3 install --break-system-packages --no-cache-dir --upgrade awscli pip zaproxy pyyaml requests urllib3 
+RUN pip3 install --break-system-packages --no-cache-dir --upgrade awscli pip zaproxy pyyaml requests urllib3
 
 WORKDIR /zap
 
@@ -91,3 +91,9 @@ RUN echo "zap2docker-weekly" > /zap/container && \
     chmod a+x /home/zap/.xinitrc
 
 HEALTHCHECK CMD curl --silent --output /dev/null --fail http://localhost:$ZAP_PORT/ || exit 1
+
+# Instructions to build the Docker image
+# docker build -t zaproxy-weekly -f /Users/naveenprakash/Desktop/zaproxy/docker/Dockerfile-weekly .
+
+# Instructions to run the Docker container
+# docker run -d -p 8080:8080 zaproxy-weekly

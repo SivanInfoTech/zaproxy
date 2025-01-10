@@ -16,3 +16,9 @@ COPY --link --chown=1000:1000 zap* CHANGELOG.md /zap/
 RUN chmod +x /zap/wrk/*.sh
 
 WORKDIR /zap
+
+# Instructions to build the Docker image
+# docker build -t zaproxy-tests -f /Users/naveenprakash/Desktop/zaproxy/docker/Dockerfile-tests .
+
+# Instructions to run the Docker container
+# docker run -d zaproxy-tests
