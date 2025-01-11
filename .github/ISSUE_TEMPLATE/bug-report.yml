@@ -1,13 +1,13 @@
 name: Bug Report
-description: Report a bug impacting ZAP.
+description: Report a bug impacting Blu ZAP.
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to report a ZAP bug! Fill out the form below to provide us with info to help fix the bug. 
-        Only use this if you're 100% sure you've found a bug and can reproduce it. If you're looking for general help with ZAP, try the [User Group](https://groups.google.com/g/zaproxy-users).
-        > [!CAUTION] 
+        Thanks for taking the time to report a Blu ZAP bug! Fill out the form below to provide us with info to help fix the bug.
+        Only use this if you're 100% sure you've found a bug and can reproduce it. If you're looking for general help with Blu ZAP, try the [User Group](https://groups.google.com/g/zaproxy-users).
+        > [!CAUTION]
         > Please do not ask questions as issues - these will be closed.
   - type: textarea
     id: description
@@ -41,7 +41,7 @@ body:
       label: "Software versions:"
       description: |
         > [!IMPORTANT]
-        > Please add version information from ZAPs menu Help > Support Info, or from the CLI using the -suppinfo switch.
+        > Please add version information from Blu ZAPs menu Help > Support Info, or from the CLI using the -suppinfo switch.
 
         > [!NOTE]
         > If you're reporting a docker issue please ensure you include the image id.
@@ -65,7 +65,7 @@ body:
       label: "Errors from the zap.log file:"
       description: |
         See https://www.zaproxy.org/faq/what-is-the-default-directory-that-zap-uses/ for the location of the zap.log file for your OS.
-        
+
         > [!TIP]
         > You can attach files by clicking this area to highlight it and then dragging files in.
     validations:

@@ -1,4 +1,4 @@
-name: Check For ZAP Errors
+name: Check For Blu ZAP Errors
 on:
   workflow_dispatch:
   schedule:

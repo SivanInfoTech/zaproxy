@@ -160,6 +160,7 @@ import java.util.jar.Attributes;
 import java.util.jar.Manifest;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.ConversionException;
 import org.apache.commons.configuration.HierarchicalConfiguration;
@@ -181,8 +182,8 @@ public final class Constant {
     // ZAP: rebrand
     public static final String PROGRAM_NAME = "ZAP";
     public static final String PROGRAM_NAME_SHORT = "ZAP";
-    public static final String PROGRAM_NAME_CX = "ZAP by Checkmarx";
-    public static final String CX_BRAND_SUBHEAD = "by Checkmarx";
+    public static final String PROGRAM_NAME_CX = "Blue ZAP";
+    public static final String CX_BRAND_SUBHEAD = "Blue ZAP";
 
     /**
      * @deprecated (2.9.0) Do not use, it will be removed.

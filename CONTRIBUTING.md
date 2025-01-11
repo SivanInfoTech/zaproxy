@@ -1,5 +1,5 @@
 # Contributing to ZAP
-ZAP by Checkmarx is a community project, and we are always delighted to welcome new contributors!
+Blue ZAP is a community project, and we are always delighted to welcome new contributors!
 
 There are lots of ways you can contribute for full details see the [Contributing Guide](https://www.zaproxy.org/docs/contribute/).
 
@@ -73,10 +73,10 @@ Fixing [issues](https://github.com/zaproxy/zaproxy/issues) is very valuable (one
 
 ##### Contributor License Agreement
 
-You will need to sign the [Contributor Licensing Agreement](CLA.md). 
-If you have not yet done this then you will be prompted to sign it when you submit a PR. 
+You will need to sign the [Contributor Licensing Agreement](CLA.md).
+If you have not yet done this then you will be prompted to sign it when you submit a PR.
 The comment prompting you to sign it will explain how this can be done.
-If you would like to sign it for past PRs then just submit a dummy one to the [cla](https://github.com/zaproxy/cla) repo and follow the prompt. 
+If you would like to sign it for past PRs then just submit a dummy one to the [cla](https://github.com/zaproxy/cla) repo and follow the prompt.
 The PR does not have to be merged so we can just close it.
 
 ##### Developer Certificate of Origin

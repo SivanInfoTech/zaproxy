@@ -48,10 +48,12 @@
 // ZAP: 2023/01/10 Tidy up logger.
 package org.parosproxy.paros.view;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.util.HashMap;
 import java.util.Map;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -59,6 +61,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.SwingUtilities;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.parosproxy.paros.Constant;
@@ -110,6 +113,22 @@ public class MainMenuBar extends JMenuBar {
     public MainMenuBar() {
         super();
         initialize();
+        // Set background color for the menu bar
+        this.setBackground(Color.DARK_GRAY);
+
+        // Create a menu
+        JMenu fileMenu = new JMenu("File");
+        fileMenu.setForeground(Color.WHITE); // Set font color for the menu
+
+        // Create a menu item
+        JMenuItem exitMenuItem = new JMenuItem("Exit");
+        exitMenuItem.setForeground(Color.WHITE); // Set font color for the menu item
+
+        // Add the menu item to the menu
+        fileMenu.add(exitMenuItem);
+
+        // Add the menu to the menu bar
+        this.add(fileMenu);
     }
 
     private void initialize() {
