@@ -3,7 +3,7 @@ plugins {
     id("com.diffplug.spotless") version "6.25.0" apply false
 }
 
-rootProject.name = "BluZAP"
+rootProject.name = "zaproxy"
 
 include("zap")
 

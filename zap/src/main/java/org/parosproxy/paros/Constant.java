@@ -180,10 +180,10 @@ import org.zaproxy.zap.utils.ZapXmlConfiguration;
 
 public final class Constant {
     // ZAP: rebrand
-    public static final String PROGRAM_NAME = "ZAP";
-    public static final String PROGRAM_NAME_SHORT = "ZAP";
-    public static final String PROGRAM_NAME_CX = "Blue ZAP";
-    public static final String CX_BRAND_SUBHEAD = "Blue ZAP";
+    public static final String PROGRAM_NAME = "BLU ZAP";
+    public static final String PROGRAM_NAME_SHORT = "BLU ZAP";
+    public static final String PROGRAM_NAME_CX = "BLU ZAP Penetration Testing";
+    public static final String CX_BRAND_SUBHEAD = "Penetration Testing";
 
     /**
      * @deprecated (2.9.0) Do not use, it will be removed.

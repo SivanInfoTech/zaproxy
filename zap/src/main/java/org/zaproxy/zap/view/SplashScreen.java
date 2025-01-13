@@ -34,6 +34,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.function.Consumer;
+
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
@@ -45,6 +46,7 @@ import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.border.Border;
 import javax.swing.plaf.basic.BasicProgressBarUI;
+
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -95,7 +97,8 @@ public class SplashScreen extends JFrame {
         JPanel panel = new JPanel(new GridBagLayout());
         panel.setPreferredSize(DisplayUtils.getScaledDimension(430, 430));
         if (!DisplayUtils.isDarkLookAndFeel()) {
-            panel.setBackground(Color.decode("#F4FAFF"));
+            panel.setBackground(Color.decode("#111112"));
+            panel.setForeground(Color.decode("#ffffff"));
         }
 
         Border margin = BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED);

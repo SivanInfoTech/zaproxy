@@ -74,7 +74,7 @@ class DaemonBootstrap extends HeadlessBootstrap {
                                 try {
                                     control = initControl();
                                 } catch (IllegalStateException e) {
-                                    System.err.println("Failed to start ZAP. " + e.getMessage());
+                                    System.err.println("Failed to start BLU ZAP. " + e.getMessage());
                                     return;
                                 }
 

@@ -19,11 +19,16 @@
  */
 package org.zaproxy.zap;
 
+import java.awt.Color;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.URLConnection;
 import java.util.Arrays;
 import java.util.Locale;
+
+import javax.swing.UIManager;
+import javax.swing.plaf.ColorUIResource;
+
 import org.apache.commons.io.output.NullOutputStream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -80,6 +85,63 @@ public class ZAP {
      */
     public static void main(String[] args) throws Exception {
         setCustomErrStream();
+
+        // Define the custom background color
+        Color backgroundColor = new Color(30, 33, 39);
+        Color foregroundColor = new Color(31,41,55);
+        // Set global properties for background and font color
+        UIManager.put("Panel.background", new ColorUIResource(foregroundColor));
+        UIManager.put("Panel.foreground", new ColorUIResource(backgroundColor));
+        UIManager.put("Label.background", new ColorUIResource(backgroundColor));
+        UIManager.put("Label.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("Button.background", new ColorUIResource(backgroundColor));
+        UIManager.put("Button.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("Table.background", new ColorUIResource(backgroundColor));
+        UIManager.put("Table.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("Table.gridColor", new ColorUIResource(Color.WHITE));
+        UIManager.put("TableHeader.background", new ColorUIResource(backgroundColor));
+        UIManager.put("TableHeader.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("TextField.background", new ColorUIResource(backgroundColor));
+        UIManager.put("TextField.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("TextArea.background", new ColorUIResource(backgroundColor));
+        UIManager.put("TextArea.foreground", new ColorUIResource(foregroundColor));
+        UIManager.put("CheckBox.background", new ColorUIResource(backgroundColor));
+        UIManager.put("CheckBox.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("OptionPane.background", new ColorUIResource(backgroundColor));
+        UIManager.put("OptionPane.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("OptionPane.messageForeground", new ColorUIResource(Color.WHITE));
+        UIManager.put("OptionPane.messageBackground", new ColorUIResource(backgroundColor));
+        UIManager.put("OptionPane.buttonBackground", new ColorUIResource(backgroundColor));
+        UIManager.put("OptionPane.buttonForeground", new ColorUIResource(Color.WHITE));
+        UIManager.put("ScrollPane.background", new ColorUIResource(backgroundColor));
+        UIManager.put("ScrollPane.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("Viewport.background", new ColorUIResource(backgroundColor));
+        UIManager.put("Viewport.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("ComboBox.background", new ColorUIResource(backgroundColor));
+        UIManager.put("ComboBox.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("ComboBox.selectionBackground", new ColorUIResource(Color.DARK_GRAY));
+        UIManager.put("ComboBox.selectionForeground", new ColorUIResource(Color.WHITE));
+        UIManager.put("Menu.background", new ColorUIResource(backgroundColor));
+        UIManager.put("Menu.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("MenuItem.background", new ColorUIResource(backgroundColor));
+        UIManager.put("MenuItem.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("ToolTip.background", new ColorUIResource(backgroundColor));
+        UIManager.put("ToolTip.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("List.background", new ColorUIResource(backgroundColor));
+        UIManager.put("List.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("List.selectionBackground", new ColorUIResource(Color.DARK_GRAY));
+        UIManager.put("List.selectionForeground", new ColorUIResource(Color.WHITE));
+        UIManager.put("TabbedPane.background", new ColorUIResource(backgroundColor));
+        UIManager.put("TabbedPane.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("TabbedPane.selected", new ColorUIResource(Color.DARK_GRAY));
+        UIManager.put("TabbedPane.contentAreaColor", new ColorUIResource(backgroundColor));
+        UIManager.put("TabbedPane.selectedForeground", new ColorUIResource(Color.WHITE));
+        UIManager.put("ToolBar.background", new ColorUIResource(backgroundColor));
+        UIManager.put("ToolBar.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("Separator.background", new ColorUIResource(backgroundColor));
+        UIManager.put("Separator.foreground", new ColorUIResource(Color.WHITE));
+        UIManager.put("PopupMenu.background", new ColorUIResource(backgroundColor));
+        UIManager.put("PopupMenu.foreground", new ColorUIResource(foregroundColor));
 
         CommandLine cmdLine = null;
         try {

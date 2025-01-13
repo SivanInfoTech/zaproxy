@@ -1,12 +1,12 @@
 # Contributing to ZAP
-Blue ZAP is a community project, and we are always delighted to welcome new contributors!
+BLU ZAP Penetration Testing is a community project, and we are always delighted to welcome new contributors!
 
 There are lots of ways you can contribute for full details see the [Contributing Guide](https://www.zaproxy.org/docs/contribute/).
 
 ## Got a Question or Problem?
-If you have a question or problem relating to using ZAP then the first thing to do is to check the [Frequently Asked Questions](https://www.zaproxy.org/faq/).
+If you have a question or problem relating to using BLU ZAP then the first thing to do is to check the [Frequently Asked Questions](https://www.zaproxy.org/faq/).
 
-We also include a comprehensive User Guide with ZAP which is also available online: https://www.zaproxy.org/docs/desktop/
+We also include a comprehensive User Guide with BLU ZAP which is also available online: https://www.zaproxy.org/docs/desktop/
 
 If they don't help then please ask on the [User Group](https://groups.google.com/group/zaproxy-users)
 
@@ -18,7 +18,7 @@ It's worth checking to see if it's already been reported, and including as much 
 This FAQ explains some useful steps you can follow: https://www.zaproxy.org/faq/somethings-not-working-what-should-i-do/
 
 ## Found a Vulnerability?
-If you think you have found a vulnerability in ZAP then please report it via our [bug bounty program](https://bugcrowd.com/owaspzap).
+If you think you have found a vulnerability in BLU ZAP then please report it via our [bug bounty program](https://bugcrowd.com/owaspzap).
 
 We are always very grateful to researchers who report vulnerabilities responsibly and will be very happy to give credit for the valuable assistance they provide.
 
@@ -38,34 +38,34 @@ For information about the ZAP Evangelists and how to join up see the [ZAP Evange
 ## Help Improve the Documentation
 The source for the ZAP [User Guide](https://www.zaproxy.org/docs/desktop/) is underneath the zap-core-help repo [addOns/help/src/main/javahelp/contents](https://github.com/zaproxy/zap-core-help/tree/master/addOns/help/src/main/javahelp/contents) directory.
 
-The Java Help included with ZAP and the online version are both generated from these HTML pages. Send Pull Requests to help us improve it.
+The Java Help included with BLU ZAP and the online version are both generated from these HTML pages. Send Pull Requests to help us improve it.
 
 ## Coding
 
 There's always lots of coding to be done! So much so that we've split it into different categories.
-Refer to [BUILDING] on how to build and run ZAP.
+Refer to [BUILDING] on how to build and run BLU ZAP.
 
 All code should follow the [Development Rules and Guidelines](https://github.com/zaproxy/zaproxy/wiki/DevGuidelines).
 
-Other resources for ZAP Developers include:
-* The [Hacking ZAP blog posts](https://github.com/zaproxy/zaproxy/wiki/Development#Hacking_ZAP)
+Other resources for BLU ZAP Developers include:
+* The [Hacking BLU ZAP blog posts](https://github.com/zaproxy/zaproxy/wiki/Development#Hacking_ZAP)
 * The [Contributing Changes](https://github.com/zaproxy/zaproxy/wiki/Contributing-Changes) wiki page
 * The [Internal Details](https://github.com/zaproxy/zaproxy/wiki/InternalDetails) wiki pages
 
 If you are interested in working on any of the code then the [Developer Group](https://groups.google.com/group/zaproxy-develop) is the best place to ask questions.
 
 ### Improve Existing Scan Rules or Write New Ones
-The scan rules define how ZAP can automatically detect vulnerabilities.
+The scan rules define how BLU ZAP can automatically detect vulnerabilities.
 
-We are always looking to improve existing ones and add new ones, so this is a great place to start helping with the ZAP code base.
+We are always looking to improve existing ones and add new ones, so this is a great place to start helping with the BLU ZAP code base.
 
 ### Improve Existing Add-Ons or Write New Ones
-Much of the ZAP functionality is implemented as add-ons, even features that are included 'as standard' in ZAP releases.
+Much of the BLU ZAP functionality is implemented as add-ons, even features that are included 'as standard' in ZAP releases.
 
-Add-ons are a great way to extend ZAP and can be ideal for student projects - many of the existing add-ons have been implemented by students, either through programs like Google Summer of Code and the Mozilla Winter of Security or directly as part of course work.
+Add-ons are a great way to extend BLU ZAP and can be ideal for student projects - many of the existing add-ons have been implemented by students, either through programs like Google Summer of Code and the Mozilla Winter of Security or directly as part of course work.
 
 ### Improve the ZAP Core
-The ZAP 'core' underpins all of the other ZAP features, and so ensuring it is as robust as possible is very important.
+The ZAP 'core' underpins all of the other BLU ZAP features, and so ensuring it is as robust as possible is very important.
 
 Fixing [issues](https://github.com/zaproxy/zaproxy/issues) is very valuable (ones flagged as [IdealFirstBug](https://github.com/zaproxy/zaproxy/issues?q=is%3Aopen+is%3Aissue+label%3AIdealFirstBug) are good ones to start on) and there are always many core improvements we want to make.
 
@@ -113,7 +113,7 @@ does not support it.
       * Retrieved by another member of the team, fixed up and resubmitted. In which case the commit message (PR message) should contain a reference to the original submission.
 
 ##### Approval process:
-* All PRs must be approved by a minimum of 2 members of the ZAP Core Team (other than the author) and anyone who is flagged as a reviewer on the PR.
+* All PRs must be approved by a minimum of 2 members of the BLU ZAP Core Team (other than the author) and anyone who is flagged as a reviewer on the PR.
 * The PR author can optionally specify any reviewer they would like to review their PR and any member of the Core Team can add themselves as a reviewer. This will effectively prevent the PR from being merged until they approve it.
 * Any member of the Core Team can merge a PR as long as the above conditions are met.
 * Reviews by people outside of the Core Team are still appreciated :)

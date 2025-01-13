@@ -21,7 +21,9 @@ package org.zaproxy.zap.view;
 
 import java.util.Collections;
 import java.util.List;
+
 import javax.swing.table.AbstractTableModel;
+
 import org.parosproxy.paros.Constant;
 
 @SuppressWarnings("serial")

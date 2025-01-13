@@ -1,13 +1,13 @@
 # Building
-ZAP is built with [Gradle], the following sections explain how to use it to build and run ZAP.
+BLU ZAP is built with [Gradle], the following sections explain how to use it to build and run BLU ZAP.
 The Gradle tasks are expected to be executed with the provided [Gradle Wrapper].
 
 ## IDEs
-The following page provides in depth guides on how to import, build, and run ZAP (core and add-ons) with commonly used IDEs:
+The following page provides in depth guides on how to import, build, and run BLU ZAP (core and add-ons) with commonly used IDEs:
 https://www.zaproxy.org/docs/developer/
 
 ## Run ZAP
-To run ZAP directly from the source run the task `:zap:run`. It will use any add-ons available in the [zap/src/main/dist/plugin/] directory.
+To run BLU ZAP directly from the source run the task `:zap:run`. It will use any add-ons available in the [zap/src/main/dist/plugin/] directory.
 
 **NOTE:** No add-on is included in the repository, they need to be built/copied separately into the `plugin` directory.
 
@@ -15,7 +15,7 @@ To run ZAP directly from the source run the task `:zap:run`. It will use any add
 To execute the tests run the task `:zap:test`.
 
 ## Distributions
-The distributions bundle ZAP and its dependencies, all necessary to run ZAP standalone. By default the distributions of development
+The distributions bundle BLU ZAP and its dependencies, all necessary to run BLU ZAP standalone. By default the distributions of development
 versions (SNAPSHOT) bundle the add-ons present in the dist `plugin` directory, main versions (non-SNAPSHOT) bundle a [predefined
 list of add-ons] (downloaded automatically when the distribution is built).
 
@@ -54,7 +54,7 @@ A tar.gz package, the macOS/Windows specific add-ons are excluded from this dist
 To build it run the task `:zap:distLinux`.
 
 ### macOS
-A dmg bundling ZAP, its dependencies, and a JRE. The Linux/Windows specific add-ons are excluded from this distribution.
+A dmg bundling BLU ZAP, its dependencies, and a JRE. The Linux/Windows specific add-ons are excluded from this distribution.
 
 To build the macOS distributions run the tasks `:zap:distMac` and `:zap:distMacArm64`, for the architectures `x64` and `aarch64` respectively.
 

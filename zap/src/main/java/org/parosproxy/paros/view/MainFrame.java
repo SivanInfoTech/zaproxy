@@ -42,7 +42,6 @@
 package org.parosproxy.paros.view;
 
 import java.awt.CardLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
@@ -51,7 +50,6 @@ import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.swing.AbstractAction;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
@@ -62,7 +60,6 @@ import javax.swing.JPanel;
 import javax.swing.JToggleButton;
 import javax.swing.UIManager;
 import javax.swing.WindowConstants;
-
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -245,8 +242,6 @@ public class MainFrame extends AbstractFrame {
         paneStandard = new WorkbenchPanel(options.getViewParam(), requestPanel, responsePanel);
         paneStandard.setLayout(new CardLayout());
         paneStandard.setName("paneStandard");
-        this.getContentPane().setBackground(new Color(72, 73, 74)); // Set background color
-        this.getContentPane().setForeground(new Color(255, 255, 255)); // Set font color to white
 
         initialize();
 

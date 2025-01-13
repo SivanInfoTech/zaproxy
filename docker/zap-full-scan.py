@@ -282,13 +282,13 @@ def main(argv):
     if running_in_docker():
         try:
             params = ['-config', 'spider.maxDuration=' + str(mins)]
-            
+
             if "-silent" not in zap_options:
                 params.append('-addonupdate')
                 # In case we're running in the stable container
                 params.extend(['-addoninstall', 'pscanrulesBeta'])
                 params.extend(['-addoninstall', 'ascanrulesBeta'])
-                      
+
                 if zap_alpha:
                     params.extend(['-addoninstall', 'pscanrulesAlpha'])
                     params.extend(['-addoninstall', 'ascanrulesAlpha'])
@@ -298,7 +298,7 @@ def main(argv):
             start_zap(port, params)
 
         except OSError:
-            logging.warning('Failed to start ZAP :(')
+            logging.warning('Failed to start BLU ZAP :(')
             sys.exit(3)
 
     else:
@@ -326,7 +326,7 @@ def main(argv):
             zap_ip = ipaddress_for_cid(cid)
             logging.debug('Docker ZAP IP Addr: ' + zap_ip)
         except OSError:
-            logging.warning('Failed to start ZAP in docker :(')
+            logging.warning('Failed to start BLU ZAP in docker :(')
             sys.exit(3)
 
     try:

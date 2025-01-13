@@ -430,7 +430,7 @@ def main(argv):
                     print(line)
 
             except OSError:
-                logging.warning('Failed to start ZAP :(')
+                logging.warning('Failed to start BLU ZAP :(')
                 sys.exit(3)
 
             # Read the status file to find out what code we should exit with
@@ -472,7 +472,7 @@ def main(argv):
                 start_zap(port, params)
 
             except OSError:
-                logging.warning('Failed to start ZAP :(')
+                logging.warning('Failed to start BLU ZAP :(')
                 sys.exit(3)
 
     else:
@@ -497,7 +497,7 @@ def main(argv):
             zap_ip = ipaddress_for_cid(cid)
             logging.debug('Docker ZAP IP Addr: ' + zap_ip)
         except OSError:
-            logging.warning('Failed to start ZAP in docker :(')
+            logging.warning('Failed to start BLU ZAP in docker :(')
             sys.exit(3)
 
     try:

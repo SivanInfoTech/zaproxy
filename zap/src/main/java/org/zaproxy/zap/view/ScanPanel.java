@@ -20,7 +20,6 @@
 package org.zaproxy.zap.view;
 
 import java.awt.CardLayout;
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -36,7 +35,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -46,7 +44,6 @@ import javax.swing.JProgressBar;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 import javax.swing.tree.TreeNode;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jdesktop.swingx.JXComboBox;
@@ -127,8 +124,6 @@ public abstract class ScanPanel extends AbstractPanel {
     /** This method initializes this */
     private void initialize(ImageIcon icon) {
         this.setLayout(new CardLayout());
-        this.setBackground(new Color(72, 73, 74));
-        this.setForeground(new Color(255, 255, 255));// Set to white
         if (Model.getSingleton().getOptionsParam().getViewParam().getWmUiHandlingOption() == 0) {
             this.setSize(474, 251);
         }

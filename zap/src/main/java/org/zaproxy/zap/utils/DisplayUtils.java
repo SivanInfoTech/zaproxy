@@ -19,6 +19,7 @@
  */
 package org.zaproxy.zap.utils;
 
+import com.formdev.flatlaf.FlatLaf;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -28,20 +29,15 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JToggleButton;
 import javax.swing.LookAndFeel;
 import javax.swing.UIManager;
-
 import org.parosproxy.paros.model.Model;
 import org.zaproxy.zap.view.OverlayIcon;
-
-import com.formdev.flatlaf.FlatLaf;
 
 public class DisplayUtils {
 
@@ -249,10 +245,5 @@ public class DisplayUtils {
      */
     public static Color getHighlightColor() {
         return isDarkLookAndFeel() ? new Color(0x66, 0x22, 0) : Color.LIGHT_GRAY;
-    }
-
-    public static void setDefaultColors(JComponent component) {
-        component.setBackground(new Color(72, 73, 74)); // Set background color
-        component.setForeground(new Color(255, 255, 255)); // Set font color to white
     }
 }

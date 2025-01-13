@@ -20,6 +20,7 @@
 package org.zaproxy.zap.view;
 
 import java.awt.Frame;
+
 import org.parosproxy.paros.Constant;
 import org.parosproxy.paros.db.DatabaseException;
 import org.parosproxy.paros.model.Model;

@@ -24,7 +24,9 @@ import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+
 import javax.swing.JFileChooser;
+
 import org.apache.commons.configuration.ConfigurationException;
 import org.parosproxy.paros.Constant;
 import org.parosproxy.paros.model.Model;
