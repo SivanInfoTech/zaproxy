@@ -20,6 +20,7 @@
 package org.zaproxy.zap;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.URLConnection;
@@ -28,6 +29,7 @@ import java.util.Locale;
 
 import javax.swing.UIManager;
 import javax.swing.plaf.ColorUIResource;
+import javax.swing.plaf.FontUIResource;
 
 import org.apache.commons.io.output.NullOutputStream;
 import org.apache.logging.log4j.LogManager;
@@ -143,6 +145,12 @@ public class ZAP {
         UIManager.put("PopupMenu.background", new ColorUIResource(backgroundColor));
         UIManager.put("PopupMenu.foreground", new ColorUIResource(foregroundColor));
 
+
+        // Set global font to Poppins
+        Font poppinsFont = new Font("Poppins", Font.PLAIN, 12);
+        setUIFont(new FontUIResource(poppinsFont));
+
+
         CommandLine cmdLine = null;
         try {
             cmdLine = new CommandLine(args != null ? Arrays.copyOf(args, args.length) : null);
@@ -166,6 +174,17 @@ public class ZAP {
         } catch (final Exception e) {
             LOGGER.fatal(e.getMessage(), e);
             System.exit(1);
+        }
+    }
+
+    private static void setUIFont(FontUIResource f) {
+        java.util.Enumeration<Object> keys = UIManager.getDefaults().keys();
+        while (keys.hasMoreElements()) {
+            Object key = keys.nextElement();
+            Object value = UIManager.get(key);
+            if (value instanceof FontUIResource) {
+                UIManager.put(key, f);
+            }
         }
     }
 
