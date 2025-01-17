@@ -50,6 +50,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.swing.AbstractAction;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
@@ -58,9 +59,11 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JToggleButton;
-import javax.swing.UIManager;
-import javax.swing.WindowConstants;
 import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.WindowConstants;
+
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -74,6 +77,8 @@ import org.zaproxy.zap.utils.Stats;
 import org.zaproxy.zap.view.MainToolbarPanel;
 import org.zaproxy.zap.view.ZapToggleButton;
 import org.zaproxy.zap.view.widgets.PopupButton;
+
+import com.formdev.flatlaf.FlatDarkLaf;
 
 @SuppressWarnings("serial")
 public class MainFrame extends AbstractFrame {
@@ -243,6 +248,13 @@ public class MainFrame extends AbstractFrame {
         paneStandard = new WorkbenchPanel(options.getViewParam(), requestPanel, responsePanel);
         paneStandard.setLayout(new CardLayout());
         paneStandard.setName("paneStandard");
+
+        // Set FlatDarkLaf as the default Look and Feel
+        try {
+            UIManager.setLookAndFeel(new FlatDarkLaf());
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
 
         initialize();
 
