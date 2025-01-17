@@ -19,13 +19,16 @@
  */
 package org.zaproxy.zap;
 
+import java.awt.Font;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.URLConnection;
 import java.util.Arrays;
 import java.util.Locale;
-import java.awt.Font;
+
+import javax.swing.UIManager;
 import javax.swing.plaf.FontUIResource;
+
 import org.apache.commons.io.output.NullOutputStream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
