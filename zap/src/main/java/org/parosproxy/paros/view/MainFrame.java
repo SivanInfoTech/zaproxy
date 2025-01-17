@@ -551,45 +551,29 @@ public class MainFrame extends AbstractFrame {
 
     private PopupButton getLookAndFeelButton() {
         if (lookAndFeelButton == null) {
-            lookAndFeelButton =
-                    new PopupButton() {
-                        private static final long serialVersionUID = 1L;
+            lookAndFeelButton = new PopupButton() {
+                @Override
+                public List<String> getMenuItemNames() {
+                    List<String> list = new ArrayList<>();
+                    list.add("Flat Dark");
+                    return list;
+                }
 
-                        @Override
-                        public List<String> getMenuItemNames() {
-                            List<String> list = new ArrayList<>();
-                            UIManager.LookAndFeelInfo[] looks =
-                                    UIManager.getInstalledLookAndFeels();
-                            for (UIManager.LookAndFeelInfo look : looks) {
-                                list.add(look.getName());
-                            }
-                            return list;
-                        }
+                @Override
+                public void menuItemSelected(String option) {
+                    if ("Flat Dark".equals(option)) {
+                        UIManager.LookAndFeelInfo lookAndFeel = new UIManager.LookAndFeelInfo(
+                                "Flat Dark", "com.formdev.flatlaf.FlatDarkLaf");
+                        options.getViewParam().setLookAndFeelInfo(lookAndFeel);
+                        Stats.incCounter("stats.ui.toolbar.laf.FlatDark");
+                    }
+                }
 
-                        @Override
-                        public void menuItemSelected(String option) {
-                            UIManager.LookAndFeelInfo[] looks =
-                                    UIManager.getInstalledLookAndFeels();
-                            for (UIManager.LookAndFeelInfo look : looks) {
-                                if (look.getName().equals(option)) {
-                                    options.getViewParam().setLookAndFeelInfo(look);
-                                    Stats.incCounter(
-                                            "stats.ui.toolbar.laf." + option.replace(" ", ""));
-                                }
-                            }
-                        }
-
-                        @Override
-                        public String getSelectedMenuItem() {
-                            return options.getViewParam().getLookAndFeel();
-                        }
-                    };
-            lookAndFeelButton.setIcon(
-                    new ImageIcon(
-                            WorkbenchPanel.class.getResource(
-                                    "/resource/icon/fugue/ui-color-picker-switch.png")));
-            lookAndFeelButton.setToolTipText(
-                    Constant.messages.getString("view.toolbar.switchLookAndFeel"));
+                @Override
+                public String getSelectedMenuItem() {
+                    return "Flat Dark";
+                }
+            };
         }
         return lookAndFeelButton;
     }
