@@ -34,7 +34,7 @@ launch4j {
     version.set("${project.version}")
     textVersion.set("${project.version}")
 
-    outfile.set("ZAP.exe")
+    outfile.set("BLUZAP.exe")
     chdir.set("")
     icon.set(file("src/main/resources/resource/zap.ico").toString())
 
@@ -44,8 +44,8 @@ launch4j {
     fileDescription.set("Zed Attack Proxy")
     copyright.set("The Zed Attack Proxy Project")
     productName.set("Zed Attack Proxy")
-    companyName.set("ZAP")
-    internalName.set("ZAP")
+    companyName.set("BLU ZAP")
+    internalName.set("BLU ZAP")
 
     downloadUrl.set("https://adoptium.net/")
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <install4j version="10.0.6" transformSequenceNumber="10">
-  <application name="Zed Attack Proxy" applicationId="ZAP" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" shortName="ZAP" publisher="ZAP" publisherWeb="https://www.zaproxy.org/" version="${compiler:version}" allPathsRelative="true" backupOnSave="true" macVolumeId="1369b1f423bb47f8" javaMinVersion="11">
+  <application name="Zed Attack Proxy" applicationId="BLU ZAP" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" shortName="BLU ZAP" publisher="BLU ZAP" publisherWeb="https://www.zaproxy.org/" version="${compiler:version}" allPathsRelative="true" backupOnSave="true" macVolumeId="1369b1f423bb47f8" javaMinVersion="11">
     <languages skipLanguageSelection="true">
       <principalLanguage id="en" customLocalizationFile="./resources/Messages.properties" />
       <additionalLanguages>
@@ -20,7 +20,7 @@
     </languages>
     <variables>
       <variable name="longName" value="Zed Attack Proxy" />
-      <variable name="groupName" value="ZAP" />
+      <variable name="groupName" value="BLU ZAP" />
       <variable name="unixDirName" value="zaproxy" />
       <variable name="symlinkDir" value="/usr/local/bin" />
     </variables>
@@ -105,15 +105,15 @@ if (Util.isWindows()) {
     String baseDir = context.getCompilerVariable("groupName");
     String longName = context.getCompilerVariable("longName");
     context.setVariable("sys.programGroupName", baseDir + "\\" + longName);
-    
+
     String innoKeyName = "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\OWASP ZAP_is1";
     String innoValueName = "UninstallString";
-    
+
     String innoUninstaller = (String) WinRegistry.getValue(RegistryRoot.HKEY_CURRENT_USER, innoKeyName, innoValueName);
     if (innoUninstaller == null || innoUninstaller.isEmpty()) {
         innoUninstaller = (String) WinRegistry.getValue(RegistryRoot.HKEY_LOCAL_MACHINE, innoKeyName, innoValueName);
     }
-    
+
     if (innoUninstaller == null || innoUninstaller.isEmpty()) {
         innoKeyName = "SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\OWASP ZAP_is1";
         innoUninstaller = (String) WinRegistry.getValue(RegistryRoot.HKEY_CURRENT_USER, innoKeyName, innoValueName);
@@ -121,7 +121,7 @@ if (Util.isWindows()) {
             innoUninstaller = (String) WinRegistry.getValue(RegistryRoot.HKEY_LOCAL_MACHINE, innoKeyName, innoValueName);
         }
     }
-    
+
     if (innoUninstaller != null &amp;&amp; !innoUninstaller.isEmpty()) {
         innoUninstaller = innoUninstaller.replaceAll("(?:^\")|(?:\"$)", "");
         context.setVariable("innoUninstaller", innoUninstaller);
@@ -129,7 +129,7 @@ if (Util.isWindows()) {
     }
 } else if (Util.isLinux()) {
     context.setVariable("sys.symlinkDir", context.getCompilerVariable("symlinkDir"));
-} 
+}
 
 return true;</property>
                     </object>
@@ -519,13 +519,13 @@ if (Util.isWindows()) {
         if (installDesktopIcon) {
             summaryBuilder.append("        ").append(context.getMessage("zap.installer.summary.createdesktopicon")).append('\n');
         }
-        
+
         if (installQuickLaunchIcon) {
             summaryBuilder.append("        ").append(context.getMessage("zap.installer.summary.createquickicon")).append('\n');
         }
         summaryBuilder.append('\n');
     }
-    
+
 
 } else if (Util.isLinux()) {
     summaryBuilder.append(context.getMessage("zap.installer.summary.destlocation")).append('\n');

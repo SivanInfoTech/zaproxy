@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# 
+#
 # For icns, requires software iconutil on a Mac.
 #
 # If you want to re-code this script to generate icns with Perl's
@@ -11,7 +11,7 @@
 #
 # Copyright 2014 Aspect Security - rights assigned to the OWASP ZAP project
 # Copyright 2014 The ZAP Development Team
-# 
+#
 
 use File::Copy qw(copy);
 use File::Remove qw(remove);

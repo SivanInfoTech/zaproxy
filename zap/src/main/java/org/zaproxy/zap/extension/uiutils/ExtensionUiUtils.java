@@ -22,7 +22,6 @@ package org.zaproxy.zap.extension.uiutils;
 import java.awt.EventQueue;
 import java.util.Arrays;
 import javax.swing.UIManager;
-import java.util.Collections;
 import javax.swing.UIManager.LookAndFeelInfo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -60,8 +59,11 @@ public class ExtensionUiUtils extends ExtensionAdaptor implements SessionChanged
 
     @Override
     public void initView(ViewDelegate view) {
-        Collections.singletonList(
-                new UIManager.LookAndFeelInfo("Flat Dark", "com.formdev.flatlaf.FlatDarkLaf"))
+        Arrays.asList(
+                        new LookAndFeelInfo("Flat Dark", "com.formdev.flatlaf.FlatDarkLaf"),
+                        new LookAndFeelInfo("Flat Dark", "com.formdev.flatlaf.FlatDarkLaf"),
+                        new LookAndFeelInfo("Flat Dark", "com.formdev.flatlaf.FlatDarkLaf"),
+                        new LookAndFeelInfo("Flat Dark", "com.formdev.flatlaf.FlatDarkLaf"))
                 .forEach(UIManager::installLookAndFeel);
     }
 

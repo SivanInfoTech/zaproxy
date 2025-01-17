@@ -51,7 +51,7 @@ publishing {
                 inceptionYear.set("2010")
 
                 organization {
-                    name.set("ZAP")
+                    name.set("BLU ZAP")
                     url.set("https://www.zaproxy.org/")
                 }
 

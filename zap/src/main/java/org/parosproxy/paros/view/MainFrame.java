@@ -60,6 +60,7 @@ import javax.swing.JPanel;
 import javax.swing.JToggleButton;
 import javax.swing.UIManager;
 import javax.swing.WindowConstants;
+import javax.swing.SwingUtilities;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -549,34 +550,60 @@ public class MainFrame extends AbstractFrame {
         return aboveResponsePanelPositionButton;
     }
 
-    private PopupButton getLookAndFeelButton() {
-        if (lookAndFeelButton == null) {
-            lookAndFeelButton = new PopupButton() {
-                @Override
-                public List<String> getMenuItemNames() {
-                    List<String> list = new ArrayList<>();
-                    list.add("Flat Dark");
-                    return list;
-                }
+ private PopupButton getLookAndFeelButton() {
+    if (lookAndFeelButton == null) {
+        lookAndFeelButton = new PopupButton() {
+            private static final long serialVersionUID = 1L;
 
-                @Override
-                public void menuItemSelected(String option) {
-                    if ("Flat Dark".equals(option)) {
-                        UIManager.LookAndFeelInfo lookAndFeel = new UIManager.LookAndFeelInfo(
-                                "Flat Dark", "com.formdev.flatlaf.FlatDarkLaf");
-                        options.getViewParam().setLookAndFeelInfo(lookAndFeel);
+            @Override
+            public List<String> getMenuItemNames() {
+                // Only include Flat Dark as the theme option
+                List<String> list = new ArrayList<>();
+                list.add("Flat Dark");
+                return list;
+            }
+
+            @Override
+            public void menuItemSelected(String option) {
+                if ("Flat Dark".equals(option)) {
+                    try {
+                        // Set Flat Dark as the selected look-and-feel
+                        UIManager.setLookAndFeel("com.formdev.flatlaf.FlatDarkLaf");
+
+                        // Update the entire application to use the new theme
+                        SwingUtilities.updateComponentTreeUI(SwingUtilities.getWindowAncestor(this));
+
+                        // Persist the selected theme (optional)
+                        options.getViewParam().setLookAndFeelInfo(
+                                new UIManager.LookAndFeelInfo("Flat Dark", "com.formdev.flatlaf.FlatDarkLaf"));
+
+                        // Track the theme selection for statistics
                         Stats.incCounter("stats.ui.toolbar.laf.FlatDark");
+                    } catch (Exception e) {
+                        System.err.println("Failed to apply Flat Dark theme: " + e.getMessage());
+                        e.printStackTrace();
                     }
                 }
+            }
 
-                @Override
-                public String getSelectedMenuItem() {
-                    return "Flat Dark";
-                }
-            };
-        }
-        return lookAndFeelButton;
+            @Override
+            public String getSelectedMenuItem() {
+                // Always default to "Flat Dark"
+                return "Flat Dark";
+            }
+        };
+
+        // Set icon and tooltip for the button
+        lookAndFeelButton.setIcon(
+                new ImageIcon(
+                        WorkbenchPanel.class.getResource(
+                                "/resource/icon/fugue/ui-color-picker-switch.png")));
+        lookAndFeelButton.setToolTipText(
+                Constant.messages.getString("view.toolbar.switchLookAndFeel"));
     }
+    return lookAndFeelButton;
+}
+
 
     // ZAP: Added footer toolbar panel
     public MainFooterPanel getMainFooterPanel() {
