@@ -179,10 +179,10 @@ import org.zaproxy.zap.utils.ZapXmlConfiguration;
 
 public final class Constant {
     // ZAP: rebrand
-    public static final String PROGRAM_NAME = "ZAP";
-    public static final String PROGRAM_NAME_SHORT = "ZAP";
-    public static final String PROGRAM_NAME_CX = "ZAP by Checkmarx";
-    public static final String CX_BRAND_SUBHEAD = "by Checkmarx";
+    public static final String PROGRAM_NAME = "BLU ZAP";
+    public static final String PROGRAM_NAME_SHORT = "BLU ZAP";
+    public static final String PROGRAM_NAME_CX = "BLU ZAP";
+    public static final String CX_BRAND_SUBHEAD = "BLU ZAP";
 
     /**
      * @deprecated (2.9.0) Do not use, it will be removed.
@@ -195,7 +195,7 @@ public final class Constant {
     @Deprecated
     public static final String ZAP_EXTENSIONS_PAGE = "https://github.com/zaproxy/zap-extensions";
 
-    public static final String ZAP_TEAM = "ZAP Dev Team";
+    public static final String ZAP_TEAM = "BLU ZAP Dev Team";
     public static final String PAROS_TEAM = "Chinotec Technologies";
 
     //  ************************************************************

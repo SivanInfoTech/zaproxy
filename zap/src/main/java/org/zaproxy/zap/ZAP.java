@@ -24,6 +24,8 @@ import java.io.PrintStream;
 import java.net.URLConnection;
 import java.util.Arrays;
 import java.util.Locale;
+import java.awt.Font;
+import javax.swing.plaf.FontUIResource;
 import org.apache.commons.io.output.NullOutputStream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -80,6 +82,9 @@ public class ZAP {
      */
     public static void main(String[] args) throws Exception {
         setCustomErrStream();
+        // Set global font to Poppins
+        Font poppinsFont = new Font("Poppins", Font.PLAIN, 12);
+        setUIFont(new FontUIResource(poppinsFont));
 
         CommandLine cmdLine = null;
         try {
@@ -104,6 +109,17 @@ public class ZAP {
         } catch (final Exception e) {
             LOGGER.fatal(e.getMessage(), e);
             System.exit(1);
+        }
+    }
+
+    private static void setUIFont(FontUIResource f) {
+        java.util.Enumeration<Object> keys = UIManager.getDefaults().keys();
+        while (keys.hasMoreElements()) {
+            Object key = keys.nextElement();
+            Object value = UIManager.get(key);
+            if (value instanceof FontUIResource) {
+                UIManager.put(key, f);
+            }
         }
     }
 

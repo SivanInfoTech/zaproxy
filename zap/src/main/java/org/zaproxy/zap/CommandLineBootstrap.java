@@ -22,6 +22,7 @@ package org.zaproxy.zap;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.nio.file.FileAlreadyExistsException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.parosproxy.paros.CommandLine;
@@ -71,7 +72,7 @@ public class CommandLineBootstrap extends HeadlessBootstrap {
         try {
             control = initControl();
         } catch (IllegalStateException e) {
-            System.err.println("Failed to start ZAP. " + e.getMessage());
+            System.err.println("Failed to start BLU ZAP. " + e.getMessage());
             return 1;
         }
 
